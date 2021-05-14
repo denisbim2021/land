@@ -1,19 +1,29 @@
 document.addEventListener("click", function (e) {
-  const burgerIcon = document.getElementsByClassName(
-    "header-logo__menu-icon"
-  )[0];
+    const burgerIcon=document.getElementsByClassName("header-logo__menu-icon"
+    )[0];
 
-  const menu = document.getElementsByClassName("header-nav-menu")[0];
+    const menu=document.getElementsByClassName("header-nav-menu")[0];
 
-  if (e.target === burgerIcon) {
-    if (menu.style.display === "flex") {
-      menu.style.display = "none";
-    } else {
-      menu.style.display = "flex";
+    if (e.target===burgerIcon) {
+      if (menu.style.transform==='translateY(0px)') {
+        //menu.style.display = "none";
+        menu.style.transform='translateY(-400px)';
+        menu.style.opacity = '0';
+      }
+
+      else {
+        // menu.style.display = "flex";
+        menu.style.transform='translateY(0px)';
+        menu.style.opacity = '1';
+      }
     }
-  } else {
-    if (!menu.contains(e.target)) {
-      menu.style.display = "none";
+
+    else {
+      if (!menu.contains(e.target) && menu.style.transform !== '') {
+        menu.style.transform='translateY(-400px)';
+        menu.style.opacity = '0';
+      }
     }
   }
-});
+
+);
