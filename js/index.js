@@ -7,7 +7,7 @@ document.addEventListener("click", function (e) {
     if (e.target===burgerIcon) {
       if (menu.style.transform==='translateY(0px)') {
         //menu.style.display = "none";
-        menu.style.transform='translateY(-400px)';
+        menu.style.transform='translateY(-100px)';
         menu.style.opacity = '0';
       }
 
@@ -20,7 +20,7 @@ document.addEventListener("click", function (e) {
 
     else {
       if (!menu.contains(e.target) && menu.style.transform !== '') {
-        menu.style.transform='translateY(-400px)';
+        menu.style.transform='translateY(-100px)';
         menu.style.opacity = '0';
       }
     }
